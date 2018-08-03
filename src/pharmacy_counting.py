@@ -50,8 +50,8 @@ def checkInputs(arg):
 	if len(arg) < 3: raise IllegalArgumentError('Usage: ScriptName <Input File> <Output File>') 
 	input, output = arg[1], arg[2]
 	inFile, outFile = openFile(input, "r"), openFile(output, "w+")
-	if not inFile: print("Can't open input file for read"+ inFile)
-	if not outFile: print("Can't open output file for write"+ outFile)
+	if not inFile: print("Can't open input file for read "+ input)
+	if not outFile: print("Can't open output file for write "+ output)
 	return inFile, outFile
 
 
